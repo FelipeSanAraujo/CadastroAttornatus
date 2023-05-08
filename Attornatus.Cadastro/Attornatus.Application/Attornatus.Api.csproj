@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Attornatus.Core\Attornatus.Core.csproj" />
+    <ProjectReference Include="..\Attornatus.InfraData\Attornatus.InfraData.csproj" />
+    <ProjectReference Include="..\Attornatus.Services\Attornatus.Services.csproj" />
+    <ProjectReference Include="..\Attornatus.Services\Attornatus.Application.csproj" />
+  </ItemGroup>
+
+</Project>
