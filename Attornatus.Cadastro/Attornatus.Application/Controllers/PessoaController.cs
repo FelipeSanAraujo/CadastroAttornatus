@@ -1,5 +1,4 @@
-﻿using Attornatus.Core.Entities;
-using Attornatus.Services.DTOs.PessoaDTOs;
+﻿using Attornatus.Services.DTOs.PessoaDTOs;
 using Attornatus.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;

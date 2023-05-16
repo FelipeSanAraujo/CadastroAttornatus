@@ -10,6 +10,7 @@ namespace Attornatus.Services.Profiles
         {
             CreateMap<CadastrarEnderecoDTO, Endereco>().ReverseMap();
             CreateMap<AlterarEnderecoDTO, Endereco>().ReverseMap();
+            CreateMap<ConsultarEnderecosDTO, Endereco>().ReverseMap();
         }
     }
 }

@@ -10,8 +10,12 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddJsonOptions(options =>
-    options.JsonSerializerOptions
-    .ReferenceHandler = ReferenceHandler.IgnoreCycles); ;
+{
+    var serializerOptions = options.JsonSerializerOptions;
+    serializerOptions.IgnoreNullValues = true;
+    serializerOptions.WriteIndented = true;
+    serializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

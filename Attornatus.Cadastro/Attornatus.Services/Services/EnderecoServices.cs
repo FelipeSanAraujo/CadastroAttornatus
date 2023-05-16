@@ -10,13 +10,11 @@ namespace Attornatus.Services.Services
     {
         private readonly IMapper _mapper;
         private readonly IEnderecoRepository _repository;
-        private readonly IPessoaRepository _pRepository;
 
-        public EnderecoServices(IEnderecoRepository repository, IMapper mapper, IPessoaRepository pRepository)
+        public EnderecoServices(IEnderecoRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
-            _pRepository = pRepository;
         }
 
         public void Cadastrar(CadastrarEnderecoDTO enderecoDTO)
@@ -31,9 +29,11 @@ namespace Attornatus.Services.Services
             _repository.Alterar(enderecoMap);
         }
 
-        public IEnumerable<Endereco> Consultar()
+        public IEnumerable<ConsultarEnderecosDTO> Consultar()
         {
-            return _repository.Consultar();
+            var enderecos = _repository.Consultar();
+            var enderecoMap = _mapper.Map<List<ConsultarEnderecosDTO>>(enderecos);
+            return enderecoMap;
         }
     }
 }

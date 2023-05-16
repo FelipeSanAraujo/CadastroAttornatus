@@ -8,6 +8,6 @@ namespace Attornatus.Services.Interfaces
         void Cadastrar(CadastrarEnderecoDTO dto);
         void Alterar(AlterarEnderecoDTO dto);
 
-        IEnumerable<Endereco> Consultar();
+        IEnumerable<ConsultarEnderecosDTO> Consultar();
     }
 }
