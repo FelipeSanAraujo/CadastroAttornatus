@@ -1,5 +1,5 @@
 # API para cadastro de pessoas e endereços
-O principal objetivo desta api é cadastrar pessoas e seus respectivos endereços fazendo assim o relacionamento de um para um no banco de dados.
+O principal objetivo desta api é cadastrar pessoas e seus respectivos endereços fazendo assim o relacionamento de um para muitos no banco de dados.
 O Sql Server foi a escolha juntamente com o Entityframework, as entidades foram mapeadas para o banco utilizando o Fluent Api, e o mapeamento de DTOs
 para entidades foi feito utilizando o AutoMapper.
 
